@@ -1,7 +1,12 @@
 import { QuizDetails } from "@/components/quiz/quiz-details";
-import { use } from "react";
 
-export default function QuizPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
-  return <QuizDetails id={id} />;
+// ⬅️ NOTE: No "use" import from React.
+
+type PageProps = {
+  params: { id: string };
+};
+
+export default function QuizPage({ params }: PageProps) {
+  // read params directly (no use())
+  return <QuizDetails id={params.id} />;
 }
