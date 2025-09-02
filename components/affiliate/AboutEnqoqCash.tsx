@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Award, BookOpen, Globe, Users } from "lucide-react";
 import Image from "next/image";
 
-export function AboutእንቆቅCash() {
+export function AboutEnqoqCash() {
   const stats = [
     {
       icon: <Users className="h-5 w-5 text-purple-600 dark:text-purple-400" />,
