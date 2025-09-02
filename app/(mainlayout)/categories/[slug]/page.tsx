@@ -14,7 +14,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
   return {
     title: `${category.name} Quizzes | እንቆቅCash`,
-    description: `Browse and play ${category.name.toLowerCase()} quizzes.`,
+    description: `Browse and play ${category.name.toLowerCase()} quizzes on እንቆቅCash.`,
   };
 }
 
