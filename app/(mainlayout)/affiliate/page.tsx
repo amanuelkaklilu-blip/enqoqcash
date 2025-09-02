@@ -1,4 +1,4 @@
-import { እንቆቅCash } from "@/components/affiliate/about-እንቆቅCash";
+import { AboutEnqoqCash } from "@/components/affiliate/about/AboutEnqoqCash";
 import { AffiliateCta } from "@/components/affiliate/affiliate-cta";
 import { AffiliateFAQ } from "@/components/affiliate/affiliate-faq";
 import { AffiliateHero } from "@/components/affiliate/affiliate-hero";
@@ -16,7 +16,7 @@ export default function AffiliatePage() {
       <HowToStart />
       <ProfitCalculator />
       <ProgramFeatures />
-      <AboutእንቆቅCash/>
+      <AboutEnqoqCash/>
       <WhyPartner />
       <AffiliateFAQ />
       <SuccessStories />
