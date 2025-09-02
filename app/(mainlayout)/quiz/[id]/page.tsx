@@ -1,13 +1,6 @@
-// app/(mainlayout)/quiz/[id]/page.tsx
-
 import { QuizDetails } from "@/components/quiz/quiz-details";
 
-// Server Component by default; params is a plain object.
-export default function QuizPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const { id } = params;
+export default function QuizPage({ params }: { params: { id: string } }) {
+  const { id } = params; // directly access, no need for use()
   return <QuizDetails id={id} />;
 }
