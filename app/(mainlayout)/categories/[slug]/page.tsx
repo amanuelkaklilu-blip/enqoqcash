@@ -1,9 +1,8 @@
 import { categoriesData } from "@/components/categories/categories-data";
 import { CategoryDetailPage } from "@/components/categories/category-detail-page";
-import { use } from "react";
 
-export function Metadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params);
+export function generateMetadata({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   const category = categoriesData.find((cat) => cat.slug === slug);
 
   if (!category) {
@@ -15,12 +14,12 @@ export function Metadata({ params }: { params: Promise<{ slug: string }> }) {
 
   return {
     title: `${category.name} Quizzes | እንቆቅCash`,
-    description: `Browse and play ${category.name.toLowerCase()} quizzes. ${category.description}`,
+    description: `Browse and play ${category.name.toLowerCase()} quizzes.`,
   };
 }
 
-export default function CategoryRoute({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params);
+export default function CategoryRoute({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   const category = categoriesData.find((cat) => cat.slug === slug);
 
   return <CategoryDetailPage categoryName={category} />;
