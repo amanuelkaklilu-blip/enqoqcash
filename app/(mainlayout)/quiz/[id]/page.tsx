@@ -1,12 +1,13 @@
+// app/(mainlayout)/quiz/[id]/page.tsx
+
 import { QuizDetails } from "@/components/quiz/quiz-details";
 
-// ⬅️ NOTE: No "use" import from React.
-
-type PageProps = {
+// Server Component by default; params is a plain object.
+export default function QuizPage({
+  params,
+}: {
   params: { id: string };
-};
-
-export default function QuizPage({ params }: PageProps) {
-  // read params directly (no use())
-  return <QuizDetails id={params.id} />;
+}) {
+  const { id } = params;
+  return <QuizDetails id={id} />;
 }
