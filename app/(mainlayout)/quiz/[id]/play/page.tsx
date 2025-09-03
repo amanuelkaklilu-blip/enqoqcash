@@ -1,7 +1,9 @@
-import { QuizPlay } from "@/components/quiz/quiz-play";
-import { use } from "react";
+"use client";
 
-export default function QuizPlayPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+import { QuizPlay } from "@/components/quiz/quiz-play";
+
+export default function QuizPlayPage({ params }: { params: { id: string } }) {
+  const { id } = params; // ✅ safely extract the string
+
   return <QuizPlay id={id} />;
 }
